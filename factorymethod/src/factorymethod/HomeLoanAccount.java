@@ -1,0 +1,77 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package factorymethod;
+
+/**
+ *
+ * @author Nandita
+ */
+public class HomeLoanAccount implements LoanAccount
+{
+    double amt,r1;
+    int n;
+    public HomeLoanAccount()
+    {
+        amt=0.0;
+        r1=0.0;
+        n=0;
+    }
+    
+    @Override
+    public double getInterest() 
+    {
+        return (amt*r1*n)/100;
+        /*throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.*/
+    }
+
+    @Override
+    public void setRateofInt(double r) 
+    {
+         this.r1=r;
+        /*throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.*/
+    }
+
+    @Override
+    public void setLoanAccount(double lamt)
+    {
+        this.amt=lamt;
+        /*throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.*/
+    }
+
+    @Override
+    public void setNoofYear(int noy) 
+    {
+        this.n=noy;
+        /*throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.*/
+    }
+
+    @Override
+    public String TearmCond() 
+    {
+        return "Tearm for homeloanaccount minimum 1,00,000 and maximum 5,00,000";
+        /*throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.*/
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
